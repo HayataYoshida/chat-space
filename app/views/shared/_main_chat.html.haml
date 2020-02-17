@@ -1,0 +1,37 @@
+.chat-main
+  .chat-main__header
+    .chat-main__header__leftbox
+      %h2.chat-main__header__leftbox__groupname
+        test
+      %ul.chat-main__header__leftbox__member-list
+        Member:
+        %li.chat-main__header__leftbox__member-list__member
+          masa
+    .edit-btn Edit
+
+  .massages
+    .massage
+      .massage__upper-info
+        %p.massage__upper-info__taken 
+          namae
+        %P.massage__upper-info__date  
+          2020.0213
+      .massage__mem
+        masa
+  .form
+    .form__new
+      .form__new__input-box
+        %input{type: "text", class: "form__new__input-box__text", placeholder:"type a message"}
+          %label{class: "form__new__input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "hidden"}
+      %p.form__new__input-box__send
+        Send
+   
+
+
+   
+
+    
+
+

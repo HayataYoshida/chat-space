@@ -89,6 +89,9 @@
         display: flex;
         font-size: 12px;
         color: #999999;
+        ul {
+        list-style: none;
+        }
         }
           &__member {
           margin: 0;
