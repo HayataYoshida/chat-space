@@ -4,21 +4,21 @@
       .side-bar__header__list__username  
         %p masa
       .side-bar__header__list__icon
-        = link_to ":href", "#"
-
-        %i.fa.fa-edit
-        = link_to ":href", "#"
-        %i.fa.fa-cog
+        -# = link_to ":href", "#"
+        = link_to new_group_path do
+          = icon('fas', 'edit', class: 'icon')
+        -# %i.fa.fa-edit
+        -# = link_to ":href", "#"
+        -# %i.fa.fa-cog
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
        
-  .side-bar__main                             
-  .side-bar__main__groupname                 
-    %p techcamp
-  .side-bar__main__comment 
-    %p まだメッセージがありません
-  .side-bar__main__groupname                 
-    %p techcamp
-  .side-bar__main__comment 
-    %p まだメッセージがありません
+  .side-bar__main    
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do             
+          .side-bar__main__groupname                 
+            = group.name
+          .side-bar__main__comment 
+            %p まだメッセージがありません
 
