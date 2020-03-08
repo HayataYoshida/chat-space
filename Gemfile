@@ -53,5 +53,7 @@ gem 'devise'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
- gem 'font-awesome-sass'
- gem 'pry-rails'
+gem 'font-awesome-sass'
+gem 'pry-rails'
+gem 'carrierwave'
+gem 'mini_magick'

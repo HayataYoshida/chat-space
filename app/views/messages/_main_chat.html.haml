@@ -2,36 +2,26 @@
   .chat-main__header
     .chat-main__header__leftbox
       %h2.chat-main__header__leftbox__groupname
-        test
+        = @group.name
       %ul.chat-main__header__leftbox__member-list
         Member:
         %li.chat-main__header__leftbox__member-list__member
-          masa
-    .edit-btn Edit
-
+          - @group.users.each do |user|
+            = user.name
+    .edit-btn
+      = link_to 'Edit', edit_group_path(@group)
+      -# メッセージコントローラーの　　@group = Group.find(params[:group_id])が書かれている。
+      
   .massages
-    .massage
-      .massage__upper-info
-        %p.massage__upper-info__taken 
-          namae
-        %P.massage__upper-info__date  
-          2020.0213
-      .massage__mem
-        masa
+    = render @messages
+    -# renderメソッドは、部分テンプレートを呼び出す際に利用するメソッド
+    -# 部分テンプレートのファイル名は必ずアンダーバー「_」から始まる
+    -# このファイルはindex.html.hamlに部分テンプレートされている。
   .form
-    .form__new
-      .form__new__input-box
-        %input{type: "text", class: "form__new__input-box__text", placeholder:"type a message"}
-          %label{class: "form__new__input-box__image"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "hidden"}
-      %p.form__new__input-box__send
-        Send
-   
-
-
-   
-
-    
-
-
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__new__input-box__text', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__new__input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: '.form__new__input-box__send'
