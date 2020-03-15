@@ -1,5 +1,15 @@
 class UsersController < ApplicationController
 
+  def index                    # indexを追記。
+    return nil if params[:keyword] == ""
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    respond_to do |format|
+      format.html              #レスポンスをhtmlとjsonで条件分岐
+      format.json              #jsonがレスポンスとして返るので、app/view/users/index.json.jbuilderファイルを作成。
+    end
+  end
+
+
   def edit
   end
 
