@@ -10,7 +10,7 @@
             = user.name
     .edit-btn
       = link_to 'Edit', edit_group_path(@group)
-      -# メッセージコントローラーの　　@group = Group.find(params[:group_id])が書かれている。
+      -# メッセージコントローラーの@group = Group.find(params[:group_id])が書かれている。
       
   .massages
     = render @messages
@@ -25,3 +25,4 @@
           = icon('fas', 'image', class: 'icon')
           = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: '.form__new__input-box__send'
+      
