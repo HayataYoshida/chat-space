@@ -11,9 +11,5 @@ Rails.application.routes.draw do
   end
 end
 
-
-
-
-
 #自動生成されたルートを確認
 # $ rails routes

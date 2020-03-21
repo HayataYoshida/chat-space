@@ -48,16 +48,7 @@ $(function(){
     });
   });
   
-
-
-　　　　　　//以下は自動更新の記述
-
-
-
-
-
-
-
+               //以下は自動更新の記述
     var reloadMessages = function() {
       //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
       var last_message_id = $('.message:last').data("message-id");
