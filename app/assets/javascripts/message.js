@@ -1,6 +1,7 @@
 $(function(){
 
   function buildHTML(message){
+    console.log(message)
     image = ( message.image ) ? `<img class="lower-message__image" src=${message.image} >` : ""; //三項演算子
                 var html =  
                 ` <div class="message" data-message-id="${message.id}">
@@ -9,7 +10,7 @@ $(function(){
                     ${message.user_name}
                   </div>
                   <div class="upper-message__date">
-                    ${message.date}
+                    ${message.created_at}
                   </div>
                 </div>
                 <div class="lower-message">
