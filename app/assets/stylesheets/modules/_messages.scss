@@ -22,6 +22,11 @@
       justify-content: space-between;
       color: #ffffff;
       background-color: #333333;
+      &__icon {
+        a {
+          color: #ffffff;
+        }
+      }
       }
   
         &__icon {
@@ -44,11 +49,9 @@
       background-color: #2f3e51;
       &__groupname {
         padding-top: 20px;
-        padding-left: 20px;  
-        p {
-          font-size: 15px; 
-          color: #ffffff;
-        }
+        padding-left: 20px;
+        color: #ffffff;
+      
       }
   
       &__comment {
@@ -109,6 +112,10 @@
   color: #38aef0; 
   position: absolute;
   right: 40px;
+  a {
+  color: #38aef0; 
+
+  }
  }
 
 .messages{
@@ -142,9 +149,11 @@
 height: 90px;
 padding: 20px 40px;
 background-color: #ddd;
-  &__new {
-  display: flex;
-    &__input-box {
+
+  .new_message {
+    display: flex;
+    
+    .form__new__input-box {
       background-color: #eee;
       position: relative;
       width: 100%;
@@ -169,10 +178,10 @@ background-color: #ddd;
       }
         &__image {
         display: inline-block;
-        height: 100%;
+        // height: 100%;
         width: 50px;
         position: absolute;
-        right: 0px;
+        right: 150px;
         cursor: pointer;
         line-height: 50px;
         text-align:center;
