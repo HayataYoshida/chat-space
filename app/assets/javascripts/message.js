@@ -29,6 +29,7 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
+    console.log("new")
     $.ajax({
       url: url,
       type: "POST",
@@ -38,6 +39,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log("done")
       var html = buildHTML(data);
       $('.messages').append(html);
       $("form")[0].reset();
