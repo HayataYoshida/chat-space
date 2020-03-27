@@ -1,7 +1,6 @@
 $(function(){
 
   function buildHTML(message){
-    console.log(message)
     image = ( message.image ) ? `<img class="lower-message__image" src=${message.image} >` : ""; //三項演算子
                 var html =  
                 ` <div class="message" data-message-id="${message.id}">

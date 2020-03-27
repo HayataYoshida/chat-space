@@ -24,6 +24,7 @@
       background-color: #333333;
       &__icon {
         a {
+          text-decoration: none;
           color: #ffffff;
         }
       }
@@ -47,7 +48,11 @@
       width: 300px;
       float: left;
       background-color: #2f3e51;
+      a{
+      text-decoration: none;
+      }
       &__groupname {
+        
         padding-top: 20px;
         padding-left: 20px;
         color: #ffffff;
@@ -113,6 +118,7 @@
   position: absolute;
   right: 40px;
   a {
+  text-decoration: none;
   color: #38aef0; 
 
   }
